@@ -8,6 +8,11 @@
 
 --- 
 
+# We're Hiring!
+![left 150%](images/tablexi-logo.png)
+
+---
+
 # [fit] CSS is **hard**
 
 ---
