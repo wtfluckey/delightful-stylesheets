@@ -13,5 +13,5 @@ that they are more delightful to work with.
 - [CSS Specificty - by CSS Tricks](https://css-tricks.com/specifics-on-css-specificity/)
 - [CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)
 - [Finished Componentization Example](http://codepen.io/alyfluckey/pen/GWqVVw/?editors=1100)
-- [Podcast - ITCSS & Components](https://medium.com/table-xi/xi-to-eye-interview-building-large-css-apps-and-components-with-aly-fluckey-c849841db606)
-- [Table XI](http://www.tablexi.com/)
+- [ITCSS & Components Podcast - by Table XI](https://medium.com/table-xi/xi-to-eye-interview-building-large-css-apps-and-components-with-aly-fluckey-c849841db606)
+- [Table XI Job Openings](http://www.tablexi.com/careers/)
