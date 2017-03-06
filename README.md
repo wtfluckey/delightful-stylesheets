@@ -4,6 +4,8 @@ This is a talk by Aly Fluckey, a UX Developer with Table XI,
 on how to better organize and structure your stylesheets so 
 that they are more delightful to work with.
 
+[PDF of slides](delightful-stylesheets.pdf)
+
 ### Resources
 
 - [ITCSS](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
