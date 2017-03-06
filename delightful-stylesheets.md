@@ -34,7 +34,7 @@ rules matter, but it's more complex than that.
 
 ---
 
-![inline](cascade.png)
+![inline](images/cascade.png)
 
 ---
 
@@ -61,7 +61,7 @@ is to use !important.
 
 ---
 
-![inline](specificity.png)
+![inline](images/specificity.png)
 
 ^ https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance
 
@@ -78,20 +78,20 @@ over earlier rules.
 
 ---
 
-![inline](source-order.png)
+![inline](images/source-order.png)
 
 ---
 
-![](geometry-wars.jpg)
+![](images/geometry-wars.jpg)
 # [fit] Specificity Wars
 
 ---
 
-![inline](bootstrap-specificity.png)
+![inline](images/bootstrap-specificity.png)
 
 ---
 
-![inline](bootstrap-spikes.png)
+![inline](images/bootstrap-spikes.png)
 
 ^ https://jonassebastianohlsson.com/specificity-graph/
 
@@ -126,7 +126,7 @@ is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 
 ---
 
-![inline](itcss-layers.png)
+![inline](images/itcss-layers.png)
 
 ^ The major principle of ITCSS is that it separates 
 your CSS codebase to several sections (called layers)
@@ -181,7 +181,7 @@ your CSS codebase to several sections (called layers)
 
 ---
 
-![inline](itcss-reach.png)
+![inline](images/itcss-reach.png)
 
 ^ Ordering our projects according to these key metrics has 
 several benefits. We can begin to share global and far-reaching
@@ -192,7 +192,7 @@ redundancy, which in turn means less waste and much smaller file sizes.
 
 ---
 
-![inline](txi-example.png)
+![inline](images/txi-example.png)
 
 ---
 
@@ -209,66 +209,66 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-![inline](wireframe.png)
+![inline](images/wireframe.png)
 
 ---
 
-![inline](variables-example.png)
+![inline](images/variables-example.png)
 
 ---
 
-![inline](typography-example.png)
+![inline](images/typography-example.png)
 
 ---
 
-![inline](layout-example.png)
+![inline](images/layout-example.png)
 
 ---
 
 
-![inline](components-step1.png)
+![inline](images/components-step1.png)
 
 
 ---
 
-![inline](wireframe-components.png)
+![inline](images/wireframe-components.png)
 
 ---
 
-![inline](components-step2.png)
+![inline](images/components-step2.png)
 
 ---
 
-![inline](components-step3.png)
+![inline](images/components-step3.png)
 
 ---
 
-![inline](components-step4.png)
+![inline](images/components-step4.png)
 
 ---
 
-![inline](components-step5.png)
+![inline](images/components-step5.png)
 
 ---
 
-![inline](real-life.gif)
+![inline](images/real-life.gif)
 
 ---
 
-![inline fit](footer-scss.png)![inline fit](footer-haml.png)
-![inline fit](footer-example.png)
+![inline fit](images/footer-scss.png)![inline fit](images/footer-haml.png)
+![inline fit](images/footer-example.png)
 
 ---
 
-![inline](footer-scss.png)
+![inline](images/footer-scss.png)
 
 ---
 
-![inline](footer-haml.png)
+![inline](images/footer-haml.png)
 
 ---
 
-![inline](footer-example.png)
+![inline](images/footer-example.png)
 
 ---
 
@@ -282,4 +282,4 @@ reusable components that are combined to build up different pieces of UI
 
 # *Aly Fluckey*
 ## ![inline]() @**wtfluckey**
-![right 100%](tablexi-logo.png)
+![right 100%](images/tablexi-logo.png)
