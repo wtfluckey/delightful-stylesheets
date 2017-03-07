@@ -8,7 +8,8 @@ that they are more delightful to work with.
 
 ### Resources
 
-- [ITCSS - by Harry Roberts](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
+- [ITCSS - Article by Harry Roberts](http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
+- [ITCSS Video - Presentation by Harry Roberts](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 - [CSS Cascade & Inheritance - by Mozilla](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
 - [CSS Specificty - by CSS Tricks](https://css-tricks.com/specifics-on-css-specificity/)
 - [CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)
