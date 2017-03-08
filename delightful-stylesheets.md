@@ -3,95 +3,102 @@
 
 ---
 
-## **Aly Fluckey**
-### UX Developer
-
---- 
-
-# We're Hiring!
-![left 150%](images/tablexi-logo.png)
-
----
-
 # [fit] CSS is **hard**
 
 ---
 
-- No error reporting
-- Browser compatibility
-- Specificity
-- Necessity
+## **No error reporting**
+
+^ by nature, css doesn't have a way to tell you when you've messed up
+
+---
+
+## **Browser Compatibility**
+
+---
+
+## **Specificity**
 
 ---
 
 ## ~~CSS is hard~~
-### **but it doesn't have to be**
-#### (more on this later)
+### [fit] **but it doesn't have to be**
 
 ---
 
 # The Cascade
 
-^ CSS is an acronym of Cascading Style Sheets,
-which indicates that the notion of the cascade is important.
-At its most basic level it indicates that the order of CSS
-rules matter, but it's more complex than that.
+^ You can't talk about specificity without first talking about the cascade.
+The cascade is CSS's biggest strength but also its biggest complexity.
+The cascade is the thing we end up debugging.
+
+---
+
+## **1. Source Order**
+## **2.** Specificity
+## **3.** Importance
 
 ---
 
 ![inline](images/cascade.png)
 
+^ elements within same file, but also the order in which files are included
+
 ---
 
-## **1.** Importance
+![inline](images/txi-file-order.png)
+
+---
+
+## **1.** Source Order
+## **2. Specificity**
+## **3.** Importance
+
+^ certain selectors will override others
+
+---
+
+# [fit] **```IDs```**
+# [fit] Classes
+# [fit] *Elements*
+
+---
+
+![inline](images/specificity-order.png)
+
+---
+
+## **1.** Source Order
 ## **2.** Specificity
-## **3.** Source Order
+## **3. Importance**
 
 ---
 
-# [fit] **!important**
+![](images/nuclear.jpg)
+# [fit] !important
 
----
-
-# [fit] Specificity
-
-^ element selectors, like (h1, p, div) 
-have low specificity. 
-Class selectors have a higher specificity, 
-so will win against element selectors. 
-ID selectors have an even higher specificity, 
-so will win against class selectors. 
-The only way to win against an ID selector 
-is to use !important.
-
----
-
-![inline](images/specificity.png)
-
-^ https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance
-
----
-
-# Source Order
-
-^As mentioned above, if multiple competing 
-selectors have the same importance and 
-specificity, the third factor that comes 
-into play to help decide which rule wins 
-is source order — later rules will win 
-over earlier rules.
+^ !important throws our our capability to write clean and predictable CSS
+it overrides all source order and specifity
+yes it makes things work, but it causes a lot more work to get around it in the future
+txi code audit example
 
 ---
 
 ![inline](images/source-order.png)
 
----
-
-![](images/geometry-wars.jpg)
-# [fit] Specificity Wars
+^ if you do end up with the exact same specificity and importance,
+source order wins out
 
 ---
 
+# **!important**
+### overrides all specificity and source order
+### decreases our ability to write clean & predictable CSS
+
+^ makes things super hard to change later
+
+---
+# bootstrap
 ![inline](images/bootstrap-specificity.png)
 
 ---
@@ -100,6 +107,22 @@ over earlier rules.
 
 ^ https://jonassebastianohlsson.com/specificity-graph/
 
+^ if you include bootstrap first and add on, you're setting
+yourself up for the specificity wars
+
+---
+
+![](images/geometry-wars.jpg)
+# [fit] Specificity Wars
+
+^ when your CSS codebase is not predictable, scalable or maintainable
+costs more to update, both in money and time and headaches
+talk about experience as a rails dev, spent most of my time battling spec. wars
+
+---
+
+![inline](images/mind-blown.gif)
+
 ---
 
 # [fit] Organization **&**
@@ -107,13 +130,9 @@ over earlier rules.
 
 ---
 
-# [fit] **Philosophy**
-# [fit] NOT *A*
-# [fit] *Framework*
-
----
-
 # ITCSS
+
+### *Harry Roberts*
 
 ---
 
@@ -131,14 +150,25 @@ is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 
 ---
 
-![inline](images/itcss-layers.png)
-
-^ The major principle of ITCSS is that it separates 
-your CSS codebase to several sections (called layers)
+# [fit] **Philosophy**
+# [fit] NOT *A*
+# [fit] *Framework*
 
 ---
 
-### **Settings**
+![inline](images/itcss-reach.png)
+
+---
+
+![inline](images/itcss-layers.png)
+
+^ we break up the triangle in to separate layers
+
+---
+
+![fit left](images/itcss-layers.png)
+
+## **Variables**
 
 ## contain fonts, colors, measurements, etc
 
@@ -146,54 +176,49 @@ your CSS codebase to several sections (called layers)
 
 ---
 
-### **Tools**
+![fit left](images/itcss-layers.png)
+
+## **Tools**
 ## globally used mixins and functions
 
 ^ also optional - only needed when using preprocessors
 
 ---
 
-### **General**
-### reset and/or normalize styles, box-sizing definition, etc
+![fit left](images/itcss-layers.png)
+
+## **General**
+## reset and/or normalize styles, box-sizing definition
 
 ^ This is the first layer which generates actual CSS
 
 ---
 
-### **Elements**
-## styling for bare HTML elements, like H1, A, etc
+![fit left](images/itcss-layers.png)
+
+## **Base Elements**
+## styling for HTML elements
+## ``` h1, a, p, input```
 
 ---
 
-### **Objects**
-### class-based selectors which define undecorated design patterns
+![fit left](images/itcss-layers.png)
 
-^ example media object known from OOCSS
-
----
-
-### **Components**
+## **Components**
 ## specific components unique to the design
+## ```.panel, .form ```
 
 ^ this is where the majority of our work takes place
 
 ---
 
-### **Trumps**
+![fit left](images/itcss-layers.png)
+
+## **Utilities**
 ## utilities and helper classes with ability to override
+## ```.is--hidden```
 
 ^ the _only_ place where !important should exist
-
----
-
-![inline](images/itcss-reach.png)
-
-^ Ordering our projects according to these key metrics has 
-several benefits. We can begin to share global and far-reaching
-styles much more effectively and efficiently, we vastly reduce 
-the likelihood of specificity issues, and we write CSS in a logical
-and progressive order. This means greater extensibility and less
-redundancy, which in turn means less waste and much smaller file sizes.
 
 ---
 
@@ -201,7 +226,29 @@ redundancy, which in turn means less waste and much smaller file sizes.
 
 ---
 
-# [fit] Componentization
+# [fit] **What does this buy us?**
+
+---
+
+# [fit] Reusabe & Scalable
+
+---
+
+# [fit] Reduce specificity
+
+---
+
+# [fit] Less waste, smaller files
+
+---
+
+![](images/group-happiness.jpg)
+# [fit] More **delightful**
+
+---
+
+# [fit] Organization &
+# [fit] **Componentization**
 
 ---
 
@@ -215,6 +262,10 @@ reusable components that are combined to build up different pieces of UI
 ---
 
 ![inline](images/wireframe.png)
+
+---
+
+![inline](images/wireframe-components.png)
 
 ---
 
@@ -236,11 +287,11 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-![inline](images/wireframe-components.png)
+![inline](images/components-step2.png)
 
 ---
 
-![inline](images/components-step2.png)
+![inline](images/text-components.png)
 
 ---
 
@@ -248,7 +299,19 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
+![inline](images/entry-components.png)
+
+^ talk about BEM a little bit
+
+---
+
 ![inline](images/components-step4.png)
+
+---
+
+![inline](images/entry-components-scss.png)
+
+^ call out nesting - increases specificity
 
 ---
 
@@ -260,8 +323,9 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-![inline fit](images/footer-scss.png)![inline fit](images/footer-haml.png)
 ![inline fit](images/footer-example.png)
+
+^ less than 15 lines of css specific to the footer
 
 ---
 
@@ -277,11 +341,8 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-# [fit] Pretty **cool**, huh?
-
----
-
-# [fit] **thank you**
+# [fit] Organization **&**
+# [fit] Componentization
 
 ---
 
