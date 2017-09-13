@@ -3,7 +3,9 @@
 
 ---
 
-# [fit] CSS is **hard**
+# [fit] ''CSS is **hard**''
+#### - me, many times
+#### - also, the internet
 
 ---
 
@@ -26,7 +28,9 @@
 
 ---
 
-# The Cascade
+# **The Cascade**
+
+### (it's a feature, not a 🐞)
 
 ^ You can't talk about specificity without first talking about the cascade.
 The cascade is CSS's biggest strength but also its biggest complexity.
@@ -34,43 +38,55 @@ The cascade is the thing we end up debugging.
 
 ---
 
-## **1. Source Order**
+### **The cascade**
+## **1.** Source Order
 ## **2.** Specificity
 ## **3.** Importance
 
 ---
 
-![inline](images/cascade.png)
+### The cascade
+## **1. Source Order**
+## **2.** Specificity
+## **3.** Importance
+
+
+![fit right](images/source-order2.png)
 
 ^ elements within same file, but also the order in which files are included
 
 ---
 
-![inline](images/txi-file-order.png)
-
----
-
+### The cascade
 ## **1.** Source Order
 ## **2. Specificity**
 ## **3.** Importance
+
+![fit right](images/specificity2.png)
 
 ^ certain selectors will override others
 
 ---
 
-# [fit] **```IDs```**
-# [fit] Classes
-# [fit] *Elements*
+### The cascade
+## **1.** Source Order
+## **2. Specificity**
+## **3.** Importance
+
+![fit right](images/specificity-order2.png)
+
 
 ---
 
-![inline](images/specificity-order.png)
-
----
-
+### The cascade
 ## **1.** Source Order
 ## **2.** Specificity
 ## **3. Importance**
+
+![fit right](images/important.png)
+
+^ if you do end up with the exact same specificity and importance,
+source order wins out
 
 ---
 
@@ -79,36 +95,19 @@ The cascade is the thing we end up debugging.
 
 ^ !important throws our our capability to write clean and predictable CSS
 it overrides all source order and specifity
+makes things super hard to change later
 yes it makes things work, but it causes a lot more work to get around it in the future
 txi code audit example
 
 ---
 
-![inline](images/source-order.png)
+### The cascade
+## 1. **Source Order**
+## 2. **Specificity**
+## 3. **Importance**
 
-^ if you do end up with the exact same specificity and importance,
-source order wins out
-
----
-
-# **!important**
-### overrides all specificity and source order
-### decreases our ability to write clean & predictable CSS
-
-^ makes things super hard to change later
-
----
-# bootstrap
-![inline](images/bootstrap-specificity.png)
-
----
-
-![inline](images/bootstrap-spikes.png)
-
-^ https://jonassebastianohlsson.com/specificity-graph/
-
-^ if you include bootstrap first and add on, you're setting
-yourself up for the specificity wars
+^ so that's the cascase, the thing that makes css css
+what happens when we don't respect the cascade? specificity wars
 
 ---
 
@@ -121,18 +120,47 @@ talk about experience as a rails dev, spent most of my time battling spec. wars
 
 ---
 
-![inline](images/mind-blown.gif)
+# bootstrap
+
+
+``` css
+
+.table-hover > tbody > tr.danger:hover > th {
+  background-color: #ebcccc;
+}
+
+```
 
 ---
 
-# [fit] Organization **&**
+# bootstrap specificity
+
+![inline](images/bootstrap-specificity2.png)
+
+^ https://jonassebastianohlsson.com/specificity-graph/
+
+^ if you include bootstrap first and add on, you're setting
+yourself up for the specificity wars
+
+---
+
+### _So what now?_
+### **What can we do to save us from ourselves?**
+
+![inline](images/what-to-do.gif)
+
+^ so what now? What can we do to save us from ourselves?
+
+---
+
+# [fit] _Organization_ **&**
 # [fit] Componentization
 
 ---
-
+### **Organization with**
 # ITCSS
 
-### *Harry Roberts*
+### *by Harry Roberts*
 
 ---
 
@@ -242,13 +270,13 @@ is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 
 ---
 
-![](images/group-happiness.jpg)
-# [fit] More **delightful**
+![inline](images/delightful.gif)
+# More **delightful**
 
 ---
 
-# [fit] Organization &
-# [fit] **Componentization**
+# [fit] _Organization_ **&**
+# [fit] Componentization
 
 ---
 
@@ -261,11 +289,17 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-![inline](images/wireframe.png)
+![inline](images/mockup.png)
 
 ---
 
-![inline](images/wireframe-components.png)
+## **Set up base styles first**
+- fonts
+- colors
+- sizing & measurements
+- layout
+
+![fit right](images/mockup.png)
 
 ---
 
@@ -281,19 +315,41 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-
 ![inline](images/components-step1.png)
-
 
 ---
 
-![inline](images/components-step2.png)
+**1. text components** </br>
+
+- section header
+- title & subtitle
+
+</br>
+
+**2. entry components**</br>
+
+- entry
+- image
+- content
+- featured entry
+
+![fit right](images/mockup.png)
 
 ---
 
 ![inline](images/text-components.png)
 
+^ text components
+
 ---
+
+![inline](images/components-step2.png)
+
+^ what page looks like with text components applied
+
+---
+
+Next is the entry components
 
 ![inline](images/components-step3.png)
 
@@ -301,27 +357,50 @@ reusable components that are combined to build up different pieces of UI
 
 ![inline](images/entry-components.png)
 
+^ entry html
 ^ talk about BEM a little bit
-
----
-
-![inline](images/components-step4.png)
 
 ---
 
 ![inline](images/entry-components-scss.png)
 
+^ entry-scss
 ^ call out nesting - increases specificity
 
 ---
 
-![inline](images/components-step5.png)
+![inline](images/components-step4.png)
+
+^ what page looks like with entry compoonents applied
 
 ---
 
-![inline](images/real-life.gif)
+# **Almost done!**
+
+- Featured entry styling
+- Responsiveness
+
+![fit right](images/mockup.png)
 
 ---
+
+![inline](images/featured-entry-scss.png)
+
+^ featured entry scss
+
+---
+
+![inline](images/fillmurray.gif)
+
+^ gif of page showing featured & responsive
+
+---
+
+# [fit] _Organization_ **&**
+# [fit] Componentization
+
+---
+
 
 ![inline fit](images/footer-example.png)
 
@@ -341,8 +420,7 @@ reusable components that are combined to build up different pieces of UI
 
 ---
 
-# [fit] Organization **&**
-# [fit] Componentization
+![inline](images/cat-computer.gif)
 
 ---
 
