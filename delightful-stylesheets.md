@@ -7,19 +7,9 @@
 #### - me, many times
 #### - also, the internet
 
----
-
-## **No error reporting**
-
-^ by nature, css doesn't have a way to tell you when you've messed up
-
----
-
-## **Browser Compatibility**
-
----
-
-## **Specificity**
+^ no error reporting
+^ browser compatibility
+^ specificity
 
 ---
 
@@ -108,39 +98,9 @@ txi code audit example
 
 ^ so that's the cascase, the thing that makes css css
 what happens when we don't respect the cascade? specificity wars
-
----
-
-![](images/geometry-wars.jpg)
-# [fit] Specificity Wars
-
 ^ when your CSS codebase is not predictable, scalable or maintainable
 costs more to update, both in money and time and headaches
 talk about experience as a rails dev, spent most of my time battling spec. wars
-
----
-
-# bootstrap
-
-
-``` css
-
-.table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
-}
-
-```
-
----
-
-# bootstrap specificity
-
-![inline](images/bootstrap-specificity2.png)
-
-^ https://jonassebastianohlsson.com/specificity-graph/
-
-^ if you include bootstrap first and add on, you're setting
-yourself up for the specificity wars
 
 ---
 
