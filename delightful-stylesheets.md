@@ -22,9 +22,8 @@
 
 ### (it's a feature, not a 🐞)
 
-^ You can't talk about specificity without first talking about the cascade.
-The cascade is CSS's biggest strength but also its biggest complexity.
-The cascade is the thing we end up debugging.
+^ CSS is doing exactly what it was meant to do
+make the cascade work for you, don't fight against it
 
 ---
 
@@ -52,7 +51,7 @@ The cascade is the thing we end up debugging.
 ## **2. Specificity**
 ## **3.** Importance
 
-![fit right](images/specificity2.png)
+![fit right](images/specificity-order2.png)
 
 ^ certain selectors will override others
 
@@ -63,8 +62,7 @@ The cascade is the thing we end up debugging.
 ## **2. Specificity**
 ## **3.** Importance
 
-![fit right](images/specificity-order2.png)
-
+![fit right](images/specificity2.png)
 
 ---
 
@@ -83,11 +81,10 @@ source order wins out
 ![](images/nuclear.jpg)
 # [fit] !important
 
-^ !important throws our our capability to write clean and predictable CSS
-it overrides all source order and specifity
+^ overrides all source order and specifity
+throws our our capability to write clean and predictable CSS
 makes things super hard to change later
 yes it makes things work, but it causes a lot more work to get around it in the future
-txi code audit example
 
 ---
 
@@ -97,10 +94,9 @@ txi code audit example
 ## 3. **Importance**
 
 ^ so that's the cascase, the thing that makes css css
-what happens when we don't respect the cascade? specificity wars
-^ when your CSS codebase is not predictable, scalable or maintainable
+^ bad css happens when we ignore the cascade and the rules of css
+^ this makes your codebase not predictable, scalable or maintainable
 costs more to update, both in money and time and headaches
-talk about experience as a rails dev, spent most of my time battling spec. wars
 
 ---
 
@@ -128,11 +124,7 @@ talk about experience as a rails dev, spent most of my time battling spec. wars
 # [fit] *Triangle*
 # [fit] CSS
 
-^ ITCSS stands for Inverted Triangle CSS and it helps 
-you to organize your project CSS files in such way that 
-you can better deal with (not always easy-to-deal with) CSS
-
-^ 
+^ a way to organize your css so that the cascade works for you
 ITCSS can be used with or without preprocessors and
 is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 
@@ -141,6 +133,8 @@ is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 # [fit] **Philosophy**
 # [fit] NOT *A*
 # [fit] *Framework*
+
+^ no code to download, just simply a way of thinking differently
 
 ---
 
@@ -244,12 +238,11 @@ is compatible with CSS methodologies like BEM, SMACSS or OOCSS.
 # [fit] **self-contained**
 # [fit] *reusable*
 
-^ no longer building using the page model, but building discrete,
-reusable components that are combined to build up different pieces of UI
+^ discrete, reusable components that are combined to build up different pieces of UI
 
 ---
 
-![inline](images/mockup.png)
+![inline](images/mockup2.png)
 
 ---
 
@@ -259,7 +252,7 @@ reusable components that are combined to build up different pieces of UI
 - sizing & measurements
 - layout
 
-![fit right](images/mockup.png)
+![fit right](images/mockup2.png)
 
 ---
 
@@ -293,7 +286,7 @@ reusable components that are combined to build up different pieces of UI
 - content
 - featured entry
 
-![fit right](images/mockup.png)
+![fit right](images/mockup2.png)
 
 ---
 
@@ -340,7 +333,7 @@ Next is the entry components
 - Featured entry styling
 - Responsiveness
 
-![fit right](images/mockup.png)
+![fit right](images/mockup2.png)
 
 ---
 
